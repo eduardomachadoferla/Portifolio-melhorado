@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eduardo Machado Ferla — Programador Full-stack</title>
+  <meta name="description"
+    content="Portfólio de Eduardo Machado Ferla — Programador Web, PHP, Laravel, MySQL, Python e desenvolvimento de IA." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Eduardo Machado Ferla — Programador Web" />
+  <meta property="og:description" content="Programador em formação. PHP, Laravel, MySQL, Python e IA." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="og-image.svg" />
+
+  <!-- Favicon SVG com iniciais -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b0d12'/%3E%3Ctext x='50' y='66' font-family='Inter,Arial' font-weight='800' font-size='42' fill='%236ee7b7' text-anchor='middle'%3EEMF%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- LOADING -->
+  <div id="loader">
+    <div class="loader-text">EMF<span>.</span></div>
+  </div>
+
+  <!-- CURSOR BLOB -->
+  <div id="cursorBlob"></div>
+
+  <!-- NAV -->
+  <header>
+    <nav class="nav">
+      <a href="#" class="logo">EMF<span>.</span></a>
+
+      <ul id="navList">
+        <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
+        <li><a href="#habilidades" data-i18n="nav.skills">Habilidades</a></li>
+        <li><a href="#projetos" data-i18n="nav.projects">Projetos</a></li>
+        <li><a href="#experiencias" data-i18n="nav.exp">Experiências</a></li>
+        <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="langToggle" class="icon-btn" aria-label="Trocar idioma">PT</button>
+        <button id="themeToggle" class="icon-btn" aria-label="Trocar tema">🌙</button>
+        <button id="menuToggle" class="icon-btn mobile-only" aria-label="Abrir menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <canvas id="particles"></canvas>
+
+    <div class="hero-grid">
+      <div class="hero-content">
+        <p class="eyebrow" data-i18n="hero.eyebrow"> Olá, eu sou</p>
+        <h1>Eduardo Machado Ferla</h1>
+        <h2 class="typed">
+          <span data-i18n="hero.iam">Programador</span>
+          <span id="typed" class="accent"></span>
+        </h2>
+        <p class="lead" data-i18n="hero.lead">
+          Busco uma oportunidade para iniciar minha carreira como Programador,
+          onde posso aplicar e expandir meus conhecimentos em um ambiente prático.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn primary" href="#projetos" data-i18n="hero.cta1">Ver projetos</a>
+          <a class="btn ghost" href="curriculo.pdf" download data-i18n="hero.cta2">📄 Baixar CV</a>
+        </div>
+
+        <div class="socials">
+          <a href="https://github.com/eduardomachadoferla" target="_blank" rel="noopener" aria-label="GitHub" class="social">GitHub</a>
+          <a href="https://www.linkedin.com/in/eduardo-machado-ferla-a32113301/?skipRedirect=true" target="_blank" rel="noopener" aria-label="LinkedIn"
+            class="social">LinkedIn</a>
+          <a href="mailto:emachadoferla@gmail.com" class="social">Email</a>
+        </div>
+      </div>
+
+      <div class="hero-avatar">
+        <div class="avatar-ring">
+          <div class="avatar">
+            <!-- Coloque uma foto sua: substitua o conteúdo abaixo por <img src="foto.jpg" alt="Eduardo"> -->
+            <img src="eu.jpeg" alt="Eduardo">
+          </div>
+        </div>
+        <div class="floating-tag tag-1">{ código }</div>
+        <div class="floating-tag tag-2">&lt;dev/&gt;</div>
+        <div class="floating-tag tag-3">PHP</div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">scroll ↓</div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-bar">
+    <div class="container stats">
+      <div class="stat"><span class="num" data-target="7">0</span>
+        <p data-i18n="stats.projects">Projetos</p>
+      </div>
+      <div class="stat"><span class="num" data-target="4">0</span>
+        <p data-i18n="stats.exp">Experiências</p>
+      </div>
+      <div class="stat"><span class="num" data-target="10">0</span>
+        <p data-i18n="stats.tech">Tecnologias</p>
+      </div>
+      <div class="stat"><span class="num" data-target="3">0</span>
+        <p>+ <span data-i18n="stats.years">anos estudando</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section">
+    <div class="container two-col">
+      <div>
+        <h3 class="section-title" data-i18n="about.title">Sobre mim</h3>
+        <p>
+          Sou Eduardo, moro em Cascavel - Paraná e sou apaixonado por tecnologia e desenvolvimento web.
+          Tenho formação técnica em Informática para Internet e atualmente curso
+          Análise e Desenvolvimento de Sistemas.
+
+          Gosto de transformar ideias em projetos funcionais, buscando sempre criar
+          sistemas modernos, responsivos e eficientes. Tenho interesse em desenvolvimento
+          web, automações, inteligência artificial e soluções que unam tecnologia,
+          criatividade e experiência do usuário.
+        </p>
+        <ul class="info-list">
+          <li><strong data-i18n="about.birth">Nascimento:</strong> 11/08/2007</li>
+          <li><strong data-i18n="about.age">Idade:</strong> 18 <span data-i18n="about.years">anos</span></li>
+          <li><strong data-i18n="about.loc">Localização:</strong> Cascavel — PR</li>
+        </ul>
+
+        <h4 class="mini-title" data-i18n="about.langs">Idiomas</h4>
+        <div class="langs">
+          <div class="lang-item"><span>🇧🇷 Português</span><span class="muted" data-i18n="about.native">Nativo</span>
+          </div>
+          <div class="lang-item"><span>🇺🇸 Inglês</span><span class="muted"
+              data-i18n="about.intermediate">Intermediário</span></div>
+          <div class="lang-item">
+            <span>🇮🇹 Italiano</span>
+            <span class="muted">Intermediário</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="section-title" data-i18n="edu.title">Formação</h3>
+        <div class="timeline">
+          <div class="t-item">
+            <span class="t-dot"></span>
+            <h4>Ensino Médio Técnico — Informática para Internet</h4>
+            <p class="muted">Marista Escola Social Cascavel — Completo</p>
+            <p data-i18n="edu.1">Ênfase em programação web, design e banco de dados.</p>
+          </div>
+          <div class="t-item">
+            <span class="t-dot"></span>
+            <h4>Análise e Desenvolvimento de Sistemas</h4>
+            <p class="muted">Univel — 1º semestre</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section id="habilidades" class="section alt">
+    <div class="container">
+      <h3 class="section-title center" data-i18n="skills.title">Habilidades Técnicas</h3>
+
+      <div class="skills-bars">
+        <div class="bar"><label>HTML <span>95%</span></label>
+          <div class="track">
+            <div class="fill" data-fill="95"></div>
+          </div>
+        </div>
+        <div class="bar"><label>CSS <span>90%</span></label>
+          <div class="track">
+            <div class="fill" data-fill="90"></div>
+          </div>
+        </div>
+        <div class="bar"><label>JavaScript <span>85%</span></label>
+          <div class="track">
+            <div class="fill" data-fill="85"></div>
+          </div>
+        </div>
+        <div class="bar"><label>PHP <span>85%</span></label>
+          <div class="track">
+            <div class="fill" data-fill="85"></div>
+          </div>
+        </div>
+        <div class="bar"><label>MySQL <span>80%</span></label>
+          <div class="track">
+            <div class="fill" data-fill="80"></div>
+          </div>
+        </div>
+        <div class="bar"><label>Laravel <span>70%</span></label>
+          <div class="track">
+            <div class="fill" data-fill="70"></div>
+          </div>
+        </div>
+        <div class="bar"><label>C++ <span>60%</span></label>
+          <div class="track">
+            <div class="fill" data-fill="60"></div>
+          </div>
+        </div>
+        <div class="bar"><label>Python <span>50%</span></label>
+          <div class="track">
+            <div class="fill" data-fill="50"></div>
+          </div>
+        </div>
+        <div class="bar">
+          <label>ReactJS <span>75%</span></label>
+          <div class="track">
+            <div class="fill" data-fill="75"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-extras">
+
+        <span class="chip">Desenvolvimento de API</span>
+        <span class="chip">C# (básico)</span>
+        <span class="chip">FlutterFlow / Mobile</span>
+        <span class="chip">Pacote Office</span>
+        <span class="chip">ReactJS</span>
+
+        <span class="chip">Laravel</span>
+        <span class="chip">MySQL</span>
+        <span class="chip">Git & GitHub</span>
+        <span class="chip">Python</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">PHP 8</span>
+        <span class="chip">HTML5</span>
+        <span class="chip">CSS3</span>
+        <span class="chip">Inteligência Artificial</span>
+        <span class="chip">Automação</span>
+        <span class="chip">Banco de Dados</span>
+        <span class="chip">UI/UX</span>
+        <span class="chip">Node.js</span>
+        <span class="chip">Responsividade</span>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETO DESTAQUE -->
+  <section class="section featured-section">
+    <div class="container">
+      <p class="eyebrow center">// <span data-i18n="featured.eyebrow">Projeto em destaque</span></p>
+      <div class="featured">
+        <div>
+          <h3>🤖 Jarvis</h3>
+          <p class="muted" data-i18n="featured.sub">Assistente de IA pessoal em Python</p>
+          <p data-i18n="featured.desc">
+            Assistente virtual inteligente capaz de reconhecer comandos de voz,
+            executar tarefas no sistema, responder perguntas e automatizar
+            atividades do dia a dia. Desenvolvido do zero em Python.
+          </p>
+          <div class="tech-list">
+            <span>Python</span><span>Speech Recognition</span><span>Text-to-Speech</span><span>APIs</span>
+          </div>
+          <div class="featured-actions">
+            <a href="https://github.com/eduardomachadoferla/Jarvis"
+   target="_blank"
+   class="btn primary">
+
+   ▶ Ver repositório
+
+</a>
+
+            </a>
+            <a href="#" class="btn ghost">&lt;/&gt; <span data-i18n="featured.code">Código</span></a>
+          </div>
+        </div>
+        <div class="featured-visual">
+          <div class="terminal">
+            <div class="term-bar"><span></span><span></span><span></span></div>
+            <pre><code><span class="c-c">$</span> python jarvis.py
+<span class="c-g">[Jarvis]</span> Olá Eduardo, em que posso ajudar?
+<span class="c-c">&gt;</span> abrir navegador
+<span class="c-g">[Jarvis]</span> Abrindo navegador...
+<span class="c-c">&gt;</span> qual a hora?
+<span class="c-g">[Jarvis]</span> Agora são <span class="c-y">14:32</span>
+<span class="c-c">&gt;</span> _</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section id="projetos" class="section alt">
+    <div class="container">
+      <h3 class="section-title center" data-i18n="projects.title">Projetos</h3>
+
+      <div class="filters">
+        <button class="filter active" data-filter="all" data-i18n="projects.all">Todos</button>
+        <button class="filter" data-filter="html">HTML/CSS/JS</button>
+        <button class="filter" data-filter="php">PHP/MySQL</button>
+        <button class="filter" data-filter="python">Python/IA</button>
+        <button class="filter" data-filter="sistema" data-i18n="projects.system">Sistema</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project" data-cat="html">
+          <div class="tag">HTML5 · CSS3 · JavaScript</div>
+
+          <h4>Portfólio Web Responsivo</h4>
+
+          <p>
+            Aplicação web estática desenvolvida com foco em responsividade,
+            performance e experiência do usuário utilizando HTML, CSS e JavaScript.
+          </p>
+        </article>
+
+        <article class="project" data-cat="html">
+          <div class="tag">JavaScript · Frontend</div>
+
+          <h4>Sistema de Gerenciamento de Tarefas</h4>
+
+          <p>
+            Aplicação frontend para gerenciamento de tarefas com manipulação dinâmica
+            do DOM, armazenamento local e organização de atividades.
+          </p>
+        </article>
+
+        <article class="project" data-cat="html">
+          <div class="tag">HTML · CSS · JS</div>
+
+          <h4>Portal Web de Notícias</h4>
+
+          <p>
+            Plataforma de exibição de conteúdo informativo desenvolvida com
+            arquitetura frontend responsiva e componentes dinâmicos em JavaScript.
+          </p>
+        </article>
+
+        <article class="project" data-cat="php">
+          <div class="tag">PHP · MySQL · JavaScript</div>
+
+          <h4>E-commerce FullStack</h4>
+
+          <p>
+            Plataforma de vendas online com integração de banco de dados,
+            gerenciamento de produtos, autenticação de usuários e interface responsiva.
+          </p>
+        </article>
+
+        <article class="project" data-cat="php">
+          <div class="tag">PHP · SQL · Gateway Payment</div>
+
+          <h4>Plataforma de Cursos Online</h4>
+
+          <p>
+            Sistema web para comercialização de cursos digitais com integração
+            de pagamentos, painel administrativo e gerenciamento de usuários.
+          </p>
+        </article>
+
+        <article class="project" data-cat="sistema">
+          <div class="tag">Sistema · Automação · Hardware</div>
+
+          <h4>Sistema de Registro Escolar</h4>
+
+          <p>
+            Plataforma integrada para controle automatizado de atrasos escolares,
+            utilizando autenticação via carteirinha e emissão térmica de tickets.
+          </p>
+        </article>
+
+        <article class="project" data-cat="python">
+          <div class="tag">Python · Inteligência Artificial</div>
+
+          <h4>Jarvis — Assistente Virtual Inteligente</h4>
+
+          <p>
+            Assistente virtual desenvolvido em Python com reconhecimento de voz,
+            automação de tarefas e integração com APIs e serviços inteligentes.
+          </p>
+        </article>
+
+      </div>
+  </section>
+
+  <!-- EXPERIENCIAS -->
+  <section id="experiencias" class="section">
+    <div class="container">
+      <h3 class="section-title center" data-i18n="exp.title">Experiências</h3>
+      <div class="exp-grid">
+        <!-- <div class="exp">
+          <h4>Colégio Auxiliadora</h4>
+          <p class="muted" data-i18n="exp.1">Auxiliar de Mídia e Marketing</p>
+        </div> -->
+        <div class="exp">
+          <h4>Lobus Software</h4>
+          <p class="muted" data-i18n="exp.2">Suporte técnico em backup e cybersegurança</p>
+        </div>
+        <div class="exp">
+          <h4>Group Data Center</h4>
+          <p class="muted" data-i18n="exp.3">Suporte e automação em empresa de TI</p>
+        </div>
+        <!-- <div class="exp">
+          <h4 data-i18n="exp.4.t">Oficina de Pianos</h4>
+          <p class="muted" data-i18n="exp.4">Auxiliar de produção</p>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="section alt">
+    <div class="container">
+      <h3 class="section-title center" data-i18n="contact.title">Vamos conversar</h3>
+      <p class="center muted" data-i18n="contact.sub">Estou aberto a oportunidades e parcerias.</p>
+
+      <div class="contact-grid">
+        <div class="contact-cards">
+          <a class="c-card" href="tel:+5545984314554">
+            <span>📱 <span data-i18n="contact.phone">Telefone</span></span>
+            <strong>(45) 98431-4554</strong>
+          </a>
+          <a class="c-card" href="mailto:emachadoferla@gmail.com">
+            <span>✉️ E-mail</span>
+            <strong>emachadoferla@gmail.com</strong>
+          </a>
+          <div class="c-card">
+            <span>📍 <span data-i18n="contact.loc">Localização</span></span>
+            <strong>Cascavel — PR</strong>
+          </div>
+        </div>
+<div class="services-grid">
+
+  <div class="service-card">
+    <h3>🌐 Desenvolvimento Web</h3>
+
+    <p>
+      Criação de sites modernos,
+      responsivos e otimizados.
+    </p>
+  </div>
+
+  <div class="service-card">
+    <h3>⚙️ Sistemas Web</h3>
+
+    <p>
+      Desenvolvimento de sistemas
+      personalizados com PHP e MySQL.
+    </p>
+  </div>
+
+  <div class="service-card">
+    <h3>🤖 Automações</h3>
+
+    <p>
+      Automação de tarefas e integração
+      de processos utilizando Python.
+    </p>
+  </div>
+
+  <div class="service-card">
+    <h3>🧠 Inteligência Artificial</h3>
+
+    <p>
+      Desenvolvimento de projetos
+      utilizando IA e assistentes virtuais.
+    </p>
+  </div>
+
+</div>
+  <!-- WHATSAPP FLUTUANTE -->
+  <a href="https://wa.me/5545984314554" target="_blank" rel="noopener" class="wa-fab" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+      <path
+        d="M.057 24l1.687-6.163A11.867 11.867 0 010 11.987C0 5.367 5.367 0 11.987 0a11.86 11.86 0 018.413 3.488 11.82 11.82 0 013.495 8.404c-.003 6.62-5.37 11.987-11.99 11.987a11.99 11.99 0 01-5.733-1.46L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zM17.498 14.382c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.173.198-.297.298-.495.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
+    </svg>
+  </a>
+
+  <!-- BACK TO TOP -->
+  <button id="toTop" class="to-top" aria-label="Voltar ao topo">↑</button>
+
+  <footer>
+    <p>© <span id="year"></span> Eduardo Machado Ferla — <span data-i18n="footer.made">Feito com</span> HTML, CSS &amp;
+      JS.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
