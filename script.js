@@ -10,6 +10,15 @@ window.addEventListener('load', () => {
 /* ============ ANO ============ */
 document.getElementById('year').textContent = new Date().getFullYear();
 
+/* ============ IDADE DINÂMICA ============ */
+const birthDate = new Date(2007, 7, 11);
+const today = new Date();
+let age = today.getFullYear() - birthDate.getFullYear();
+const birthdayThisYear = new Date(today.getFullYear(), birthDate.getMonth(), birthDate.getDate());
+if (today < birthdayThisYear) age--;
+const ageEl = document.getElementById('age');
+if (ageEl) ageEl.textContent = age;
+
 /* ============ MENU MOBILE ============ */
 const menuToggle = document.getElementById('menuToggle');
 const navList = document.getElementById('navList');
@@ -41,7 +50,7 @@ const translations = {
     'stats.projects': 'Projetos', 'stats.exp': 'Experiências',
     'stats.tech': 'Tecnologias', 'stats.years': 'anos estudando',
     'about.title': 'Sobre mim',
-    'about.text': 'Tenho 18 anos, moro em Cascavel - Paraná, e sou apaixonado por tecnologia e desenvolvimento web. Tenho formação técnica em Informática para Internet e estou cursando Análise e Desenvolvimento de Sistemas.',
+    'about.text': 'Sou Eduardo, moro em Cascavel - Paraná e sou apaixonado por tecnologia e desenvolvimento web. Tenho formação técnica em Informática para Internet e atualmente curso Análise e Desenvolvimento de Sistemas. Gosto de transformar ideias em projetos funcionais, com interesse em desenvolvimento web, automações, inteligência artificial e soluções que unam tecnologia, criatividade e experiência do usuário.',
     'about.birth': 'Nascimento:', 'about.age': 'Idade:', 'about.years': 'anos',
     'about.loc': 'Localização:', 'about.langs': 'Idiomas',
     'about.native': 'Nativo', 'about.intermediate': 'Intermediário',
@@ -50,7 +59,7 @@ const translations = {
     'featured.eyebrow': 'Projeto em destaque',
     'featured.sub': 'Assistente de IA pessoal em Python',
     'featured.desc': 'Assistente virtual inteligente capaz de reconhecer comandos de voz, executar tarefas no sistema, responder perguntas e automatizar atividades do dia a dia. Desenvolvido do zero em Python.',
-    'featured.demo': 'Ver demo', 'featured.code': 'Código',
+    'featured.demo': 'Ver demo', 'featured.code': 'Ver código no GitHub',
     'projects.title': 'Projetos', 'projects.all': 'Todos', 'projects.system': 'Sistema',
     'p.1.t': 'Site Pessoal Estático', 'p.1.d': 'Site estático para apresentar informações pessoais e projetos.',
     'p.2.t': 'Gerenciador de Tarefas', 'p.2.d': 'Aplicação web simples para gerenciar e listar tarefas pessoais.',
@@ -66,10 +75,10 @@ const translations = {
     'exp.3': 'Suporte e automação em empresa de TI',
     'exp.4.t': 'Oficina de Pianos', 'exp.4': 'Auxiliar de produção',
     'contact.title': 'Vamos conversar',
-    'contact.sub': 'Estou aberto a oportunidades e parcerias.',
+    'contact.sub': 'Estou aberto a oportunidades, projetos e novas conexões profissionais.',
     'contact.phone': 'Telefone', 'contact.loc': 'Localização',
     'form.name': 'Nome', 'form.msg': 'Mensagem', 'form.send': 'Enviar mensagem',
-    'footer.made': 'Feito com',
+    'footer.made': 'Desenvolvido com',
   },
   en: {
     'nav.about': 'About', 'nav.skills': 'Skills', 'nav.projects': 'Projects',
@@ -80,7 +89,7 @@ const translations = {
     'stats.projects': 'Projects', 'stats.exp': 'Experiences',
     'stats.tech': 'Technologies', 'stats.years': 'years studying',
     'about.title': 'About me',
-    'about.text': "I'm 18, based in Cascavel - Paraná, Brazil, passionate about tech and web development. I have a technical degree in Internet Computing and I'm pursuing Systems Analysis and Development.",
+    'about.text': "I'm Eduardo, based in Cascavel - Paraná, Brazil, and passionate about technology and web development. I hold a technical degree in Internet Computing and I'm currently studying Systems Analysis and Development. I enjoy turning ideas into functional projects, with interests in web development, automation, artificial intelligence and user-focused solutions.",
     'about.birth': 'Born:', 'about.age': 'Age:', 'about.years': 'years old',
     'about.loc': 'Location:', 'about.langs': 'Languages',
     'about.native': 'Native', 'about.intermediate': 'Intermediate',
@@ -89,7 +98,7 @@ const translations = {
     'featured.eyebrow': 'Featured project',
     'featured.sub': 'Personal AI assistant in Python',
     'featured.desc': 'Smart virtual assistant capable of recognizing voice commands, executing system tasks, answering questions and automating daily activities. Built from scratch in Python.',
-    'featured.demo': 'See demo', 'featured.code': 'Code',
+    'featured.demo': 'See demo', 'featured.code': 'View code on GitHub',
     'projects.title': 'Projects', 'projects.all': 'All', 'projects.system': 'System',
     'p.1.t': 'Personal Static Site', 'p.1.d': 'Static website to present personal info and projects.',
     'p.2.t': 'Task Manager', 'p.2.d': 'Simple web app to manage and list personal tasks.',
@@ -105,44 +114,35 @@ const translations = {
     'exp.3': 'Support and automation at an IT company',
     'exp.4.t': 'Piano Workshop', 'exp.4': 'Production assistant',
     'contact.title': "Let's talk",
-    'contact.sub': "I'm open to opportunities and partnerships.",
+    'contact.sub': "I'm open to opportunities, projects and new professional connections.",
     'contact.phone': 'Phone', 'contact.loc': 'Location',
     'form.name': 'Name', 'form.msg': 'Message', 'form.send': 'Send message',
-    'footer.made': 'Made with',
+    'footer.made': 'Built with',
   },
 };
 translations.it = {
-  'nav.about': 'Chi sono',
-  'nav.skills': 'Competenze',
-  'nav.projects': 'Progetti',
-  'nav.exp': 'Esperienze',
-  'nav.contact': 'Contatto',
-
-  'hero.eyebrow': '// Ciao, sono',
-  'hero.iam': 'Sviluppatore',
-
-  'hero.lead':
-    'Cerco un’opportunità per iniziare la mia carriera come sviluppatore, dove posso applicare ed espandere le mie conoscenze in un ambiente pratico.',
-
-  'hero.cta1': 'Vedi progetti',
-  'hero.cta2': '📄 Scarica CV',
-
-  'stats.projects': 'Progetti',
-  'stats.exp': 'Esperienze',
-  'stats.tech': 'Tecnologie',
-  'stats.years': 'anni di studio',
-
+  'nav.about': 'Chi sono', 'nav.skills': 'Competenze', 'nav.projects': 'Progetti',
+  'nav.exp': 'Esperienze', 'nav.contact': 'Contatto',
+  'hero.eyebrow': '// Ciao, sono', 'hero.iam': 'Sviluppatore',
+  'hero.lead': 'Cerco un’opportunità per iniziare la mia carriera come sviluppatore, dove posso applicare e ampliare le mie conoscenze in un ambiente pratico.',
+  'hero.cta1': 'Vedi progetti', 'hero.cta2': '📄 Scarica CV',
+  'stats.projects': 'Progetti', 'stats.exp': 'Esperienze', 'stats.tech': 'Tecnologie', 'stats.years': 'anni di studio',
   'about.title': 'Chi sono',
-
-  'contact.title': 'Parliamo',
-  'contact.sub':
-    'Sono aperto a opportunità e collaborazioni.',
-
-  'form.name': 'Nome',
-  'form.msg': 'Messaggio',
-  'form.send': 'Invia messaggio',
-
-  'footer.made': 'Creato con'
+  'about.text': 'Sono Eduardo, vivo a Cascavel - Paraná, Brasile, e sono appassionato di tecnologia e sviluppo web. Ho una formazione tecnica in Informatica per Internet e attualmente studio Analisi e Sviluppo di Sistemi. Mi piace trasformare idee in progetti funzionali, con interesse per sviluppo web, automazioni e intelligenza artificiale.',
+  'about.birth': 'Nascita:', 'about.age': 'Età:', 'about.years': 'anni', 'about.loc': 'Località:',
+  'about.langs': 'Lingue', 'about.native': 'Madrelingua', 'about.intermediate': 'Intermedio',
+  'edu.title': 'Formazione', 'edu.1': 'Focus su programmazione web, design e database.',
+  'skills.title': 'Competenze tecniche',
+  'featured.eyebrow': 'Progetto in evidenza', 'featured.sub': 'Assistente IA personale in Python',
+  'featured.desc': 'Assistente virtuale intelligente capace di riconoscere comandi vocali, eseguire attività di sistema, rispondere a domande e automatizzare attività quotidiane. Sviluppato da zero in Python.',
+  'featured.demo': 'Vedi demo', 'featured.code': 'Vedi codice su GitHub',
+  'projects.title': 'Progetti', 'projects.all': 'Tutti', 'projects.system': 'Sistema',
+  'exp.title': 'Esperienze',
+  'exp.2': 'Supporto tecnico in backup e cybersecurity', 'exp.3': 'Supporto e automazione in azienda IT',
+  'contact.title': 'Parliamo', 'contact.sub': 'Sono aperto a opportunità, progetti e nuove connessioni professionali.',
+  'contact.phone': 'Telefono', 'contact.loc': 'Località',
+  'form.name': 'Nome', 'form.msg': 'Messaggio', 'form.send': 'Invia messaggio',
+  'footer.made': 'Sviluppato con'
 };
 
 const langBtn = document.getElementById('langToggle');
@@ -162,12 +162,13 @@ function applyLang(l) {
       ? 'en'
       : 'it';
 
-  langBtn.textContent =
-    l === 'pt'
-      ? 'EN'
-      : l === 'en'
-      ? 'IT'
-      : 'PT';
+ const langNames = {
+  pt: 'PT',
+  en: 'EN',
+  it: 'IT'
+};
+
+langBtn.textContent = langNames[l];
 
   document.querySelectorAll('[data-i18n]').forEach(el => {
 
@@ -194,11 +195,11 @@ langBtn.addEventListener('click', () => {
   applyLang(langs[nextIndex]);
 
 });
-
 /* ============ TYPING ============ */
 const wordsByLang = {
   pt: ['Web', 'Full-Stack', 'PHP / Laravel', 'em formação'],
   en: ['Web', 'Full-Stack', 'PHP / Laravel', 'in training'],
+  it: ['Web', 'Full-Stack', 'PHP / Laravel', 'in formazione'],
 };
 const typedEl = document.getElementById('typed');
 let wIdx = 0, cIdx = 0, deleting = false;
@@ -339,34 +340,3 @@ initParticles();
 animateParticles();
 window.addEventListener('resize', initParticles);
 
-emailjs.init("SUA_PUBLIC_KEY");
-
-document
-  .getElementById("contact-form")
-  .addEventListener("submit", function (e) {
-
-    e.preventDefault();
-
-    emailjs.sendForm(
-      "SEU_SERVICE_ID",
-      "SEU_TEMPLATE_ID",
-      this
-    )
-    .then(() => {
-
-      document.getElementById("status").innerText =
-        "Mensagem enviada com sucesso!";
-
-      this.reset();
-
-    })
-    .catch((error) => {
-
-      document.getElementById("status").innerText =
-        "Erro ao enviar.";
-
-      console.log(error);
-
-    });
-
-});
