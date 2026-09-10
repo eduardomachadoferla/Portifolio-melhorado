@@ -4,15 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Eduardo Machado Ferla — Programador Full-stack</title>
+  <title>Eduardo Machado Ferla — Desenvolvedor Web</title>
   <meta name="description"
-    content="Portfólio de Eduardo Machado Ferla — Programador Web, PHP, Laravel, MySQL, Python e desenvolvimento de IA." />
+    content="Portfólio de Eduardo Machado Ferla — Desenvolvedor Web com conhecimentos em PHP, JavaScript, MySQL, Python, C, Git, GitHub e Linux." />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Eduardo Machado Ferla — Programador Web" />
-  <meta property="og:description" content="Programador em formação. PHP, Laravel, MySQL, Python e IA." />
+  <meta property="og:description" content="Desenvolvedor em formação. PHP, JavaScript, MySQL, Python, C, Git, GitHub e Linux." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="og-image.svg" />
 
   <!-- Favicon SVG com iniciais -->
   <link rel="icon" type="image/svg+xml"
@@ -111,7 +110,7 @@
       <div class="stat"><span class="num" data-target="4">0</span>
         <p data-i18n="stats.exp">Experiências</p>
       </div>
-      <div class="stat"><span class="num" data-target="10">0</span>
+      <div class="stat"><span class="num" data-target="14">0</span>
         <p data-i18n="stats.tech">Tecnologias</p>
       </div>
       <div class="stat"><span class="num" data-target="3">0</span>
@@ -125,19 +124,15 @@
     <div class="container two-col">
       <div>
         <h3 class="section-title" data-i18n="about.title">Sobre mim</h3>
-        <p>
+        <p data-i18n="about.text">
           Sou Eduardo, moro em Cascavel - Paraná e sou apaixonado por tecnologia e desenvolvimento web.
-          Tenho formação técnica em Informática para Internet e atualmente curso
-          Análise e Desenvolvimento de Sistemas.
-
-          Gosto de transformar ideias em projetos funcionais, buscando sempre criar
-          sistemas modernos, responsivos e eficientes. Tenho interesse em desenvolvimento
-          web, automações, inteligência artificial e soluções que unam tecnologia,
-          criatividade e experiência do usuário.
+          Tenho formação técnica em Informática para Internet e atualmente curso Análise e Desenvolvimento de Sistemas.
+          Gosto de transformar ideias em projetos funcionais, com interesse em desenvolvimento web, automações,
+          inteligência artificial e soluções que unam tecnologia, criatividade e experiência do usuário.
         </p>
         <ul class="info-list">
           <li><strong data-i18n="about.birth">Nascimento:</strong> 11/08/2007</li>
-          <li><strong data-i18n="about.age">Idade:</strong> 18 <span data-i18n="about.years">anos</span></li>
+          <li><strong data-i18n="about.age">Idade:</strong> <span id="age">19</span> <span data-i18n="about.years">anos</span></li>
           <li><strong data-i18n="about.loc">Localização:</strong> Cascavel — PR</li>
         </ul>
 
@@ -178,78 +173,58 @@
     <div class="container">
       <h3 class="section-title center" data-i18n="skills.title">Habilidades Técnicas</h3>
 
-      <div class="skills-bars">
-        <div class="bar"><label>HTML <span>95%</span></label>
-          <div class="track">
-            <div class="fill" data-fill="95"></div>
+      <div class="skill-groups">
+        <article class="skill-group">
+          <div class="skill-group-icon">&lt;/&gt;</div>
+          <h4>Front-end</h4>
+          <p>Construção de interfaces responsivas e interativas para web.</p>
+          <div class="skills-extras compact">
+            <span class="chip">HTML5</span>
+            <span class="chip">CSS3</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">ReactJS</span>
           </div>
-        </div>
-        <div class="bar"><label>CSS <span>90%</span></label>
-          <div class="track">
-            <div class="fill" data-fill="90"></div>
+        </article>
+
+        <article class="skill-group">
+          <div class="skill-group-icon">{ }</div>
+          <h4>Back-end &amp; Banco de Dados</h4>
+          <p>Desenvolvimento de aplicações, APIs e integração com banco de dados.</p>
+          <div class="skills-extras compact">
+            <span class="chip">PHP 8</span>
+            <span class="chip">Laravel</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">APIs</span>
           </div>
-        </div>
-        <div class="bar"><label>JavaScript <span>85%</span></label>
-          <div class="track">
-            <div class="fill" data-fill="85"></div>
+        </article>
+
+        <article class="skill-group">
+          <div class="skill-group-icon">$_</div>
+          <h4>Linguagens &amp; Ferramentas</h4>
+          <p>Conhecimentos de programação, versionamento e ambiente de desenvolvimento.</p>
+          <div class="skills-extras compact">
+            <span class="chip">Python</span>
+            <span class="chip">C (básico)</span>
+            <span class="chip">C++</span>
+            <span class="chip">C# (básico)</span>
+            <span class="chip featured-chip">Git</span>
+            <span class="chip featured-chip">GitHub</span>
+            <span class="chip featured-chip">Linux / Ubuntu</span>
+            <span class="chip">VS Code</span>
           </div>
-        </div>
-        <div class="bar"><label>PHP <span>85%</span></label>
-          <div class="track">
-            <div class="fill" data-fill="85"></div>
-          </div>
-        </div>
-        <div class="bar"><label>MySQL <span>80%</span></label>
-          <div class="track">
-            <div class="fill" data-fill="80"></div>
-          </div>
-        </div>
-        <div class="bar"><label>Laravel <span>70%</span></label>
-          <div class="track">
-            <div class="fill" data-fill="70"></div>
-          </div>
-        </div>
-        <div class="bar"><label>C++ <span>60%</span></label>
-          <div class="track">
-            <div class="fill" data-fill="60"></div>
-          </div>
-        </div>
-        <div class="bar"><label>Python <span>50%</span></label>
-          <div class="track">
-            <div class="fill" data-fill="50"></div>
-          </div>
-        </div>
-        <div class="bar">
-          <label>ReactJS <span>75%</span></label>
-          <div class="track">
-            <div class="fill" data-fill="75"></div>
-          </div>
-        </div>
+        </article>
       </div>
 
       <div class="skills-extras">
-
         <span class="chip">Desenvolvimento de API</span>
-        <span class="chip">C# (básico)</span>
         <span class="chip">FlutterFlow / Mobile</span>
-        <span class="chip">Pacote Office</span>
-        <span class="chip">ReactJS</span>
-
-        <span class="chip">Laravel</span>
-        <span class="chip">MySQL</span>
-        <span class="chip">Git & GitHub</span>
-        <span class="chip">Python</span>
-        <span class="chip">JavaScript</span>
-        <span class="chip">PHP 8</span>
-        <span class="chip">HTML5</span>
-        <span class="chip">CSS3</span>
         <span class="chip">Inteligência Artificial</span>
         <span class="chip">Automação</span>
-        <span class="chip">Banco de Dados</span>
         <span class="chip">UI/UX</span>
-        <span class="chip">Node.js</span>
         <span class="chip">Responsividade</span>
-
+        <span class="chip">Pacote Office</span>
       </div>
     </div>
   </section>
@@ -271,16 +246,9 @@
             <span>Python</span><span>Speech Recognition</span><span>Text-to-Speech</span><span>APIs</span>
           </div>
           <div class="featured-actions">
-            <a href="https://github.com/eduardomachadoferla/Jarvis"
-   target="_blank"
-   class="btn primary">
-
-   ▶ Ver repositório
-
-</a>
-
+            <a href="https://github.com/eduardomachadoferla/Jarvis" target="_blank" rel="noopener" class="btn primary">
+              &lt;/&gt; <span data-i18n="featured.code">Ver código no GitHub</span>
             </a>
-            <a href="#" class="btn ghost">&lt;/&gt; <span data-i18n="featured.code">Código</span></a>
           </div>
         </div>
         <div class="featured-visual">
@@ -392,6 +360,7 @@
         </article>
 
       </div>
+    </div>
   </section>
 
   <!-- EXPERIENCIAS -->
@@ -423,7 +392,7 @@
   <section id="contato" class="section alt">
     <div class="container">
       <h3 class="section-title center" data-i18n="contact.title">Vamos conversar</h3>
-      <p class="center muted" data-i18n="contact.sub">Estou aberto a oportunidades e parcerias.</p>
+      <p class="center muted" data-i18n="contact.sub">Estou aberto a oportunidades, projetos e novas conexões profissionais.</p>
 
       <div class="contact-grid">
         <div class="contact-cards">
@@ -435,50 +404,38 @@
             <span>✉️ E-mail</span>
             <strong>emachadoferla@gmail.com</strong>
           </a>
+          <a class="c-card" href="https://github.com/eduardomachadoferla" target="_blank" rel="noopener">
+            <span>💻 GitHub</span>
+            <strong>@eduardomachadoferla</strong>
+          </a>
           <div class="c-card">
             <span>📍 <span data-i18n="contact.loc">Localização</span></span>
             <strong>Cascavel — PR</strong>
           </div>
         </div>
-<div class="services-grid">
 
-  <div class="service-card">
-    <h3>🌐 Desenvolvimento Web</h3>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>🌐 Desenvolvimento Web</h3>
+            <p>Criação de sites modernos, responsivos e otimizados.</p>
+          </div>
+          <div class="service-card">
+            <h3>⚙️ Sistemas Web</h3>
+            <p>Desenvolvimento de sistemas e APIs com PHP e MySQL.</p>
+          </div>
+          <div class="service-card">
+            <h3>🤖 Automações</h3>
+            <p>Automação de tarefas e integração de processos utilizando Python.</p>
+          </div>
+          <div class="service-card">
+            <h3>🐧 Ambiente Linux</h3>
+            <p>Uso de Linux/Ubuntu, terminal, Git e GitHub no fluxo de desenvolvimento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <p>
-      Criação de sites modernos,
-      responsivos e otimizados.
-    </p>
-  </div>
-
-  <div class="service-card">
-    <h3>⚙️ Sistemas Web</h3>
-
-    <p>
-      Desenvolvimento de sistemas
-      personalizados com PHP e MySQL.
-    </p>
-  </div>
-
-  <div class="service-card">
-    <h3>🤖 Automações</h3>
-
-    <p>
-      Automação de tarefas e integração
-      de processos utilizando Python.
-    </p>
-  </div>
-
-  <div class="service-card">
-    <h3>🧠 Inteligência Artificial</h3>
-
-    <p>
-      Desenvolvimento de projetos
-      utilizando IA e assistentes virtuais.
-    </p>
-  </div>
-
-</div>
   <!-- WHATSAPP FLUTUANTE -->
   <a href="https://wa.me/5545984314554" target="_blank" rel="noopener" class="wa-fab" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
@@ -491,8 +448,8 @@
   <button id="toTop" class="to-top" aria-label="Voltar ao topo">↑</button>
 
   <footer>
-    <p>© <span id="year"></span> Eduardo Machado Ferla — <span data-i18n="footer.made">Feito com</span> HTML, CSS &amp;
-      JS.</p>
+    <p>© <span id="year"></span> Eduardo Machado Ferla — <span data-i18n="footer.made">Desenvolvido com</span> HTML, CSS &amp;
+      JavaScript.</p>
   </footer>
 
   <script src="script.js"></script>
