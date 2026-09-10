@@ -4,1178 +4,256 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Eduardo Machado Ferla — Desenvolvedor Web</title>
-
-  <meta
-    name="description"
-    content="Portfólio de Eduardo Machado Ferla — Desenvolvedor Web com conhecimentos em PHP, JavaScript, MySQL, Python, C, Git, GitHub e Linux."
-  />
+  <meta name="description"
+    content="Portfólio de Eduardo Machado Ferla — Desenvolvedor Web com conhecimentos em PHP, JavaScript, MySQL, Python, C, Git, GitHub e Linux." />
 
   <!-- Open Graph -->
-  <meta
-    property="og:title"
-    content="Eduardo Machado Ferla — Programador Web"
-  />
-
-  <meta
-    property="og:description"
-    content="Desenvolvedor em formação. PHP, JavaScript, MySQL, Python, C, Git, GitHub e Linux."
-  />
-
+  <meta property="og:title" content="Eduardo Machado Ferla — Programador Web" />
+  <meta property="og:description" content="Desenvolvedor em formação. PHP, JavaScript, MySQL, Python, C, Git, GitHub e Linux." />
   <meta property="og:type" content="website" />
 
-  <!-- Favicon -->
-  <link
-    rel="icon"
-    type="image/svg+xml"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b0d12'/%3E%3Ctext x='50' y='66' font-family='Inter,Arial' font-weight='800' font-size='42' fill='%236ee7b7' text-anchor='middle'%3EEMF%3C/text%3E%3C/svg%3E"
-  />
+  <!-- Favicon SVG com iniciais -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230b0d12'/%3E%3Ctext x='50' y='66' font-family='Inter,Arial' font-weight='800' font-size='42' fill='%236ee7b7' text-anchor='middle'%3EEMF%3C/text%3E%3C/svg%3E" />
 
-  <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  />
-
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- CSS principal -->
-  <link rel="stylesheet" href="style.css?v=3" />
-
-  <!-- CORREÇÃO DAS HABILIDADES -->
-  <style>
-
-    #habilidades .skill-groups {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
-      margin-top: 34px;
-      align-items: stretch;
-    }
-
-    #habilidades .skill-group {
-
-      background: rgba(255,255,255,0.035);
-
-      border: 1px solid rgba(255,255,255,0.09);
-
-      border-radius: 18px;
-
-      padding: 26px;
-
-      min-width: 0;
-
-      box-shadow:
-        0 10px 30px rgba(0,0,0,0.10);
-
-      transition:
-        transform .2s ease,
-        border-color .2s ease,
-        background .2s ease;
-    }
-
-    #habilidades .skill-group:hover {
-
-      transform: translateY(-4px);
-
-      border-color:
-        rgba(110,231,183,0.35);
-
-      background:
-        rgba(255,255,255,0.055);
-    }
-
-    #habilidades .skill-group-icon {
-
-      width: 44px;
-      height: 44px;
-
-      display: inline-flex;
-
-      align-items: center;
-      justify-content: center;
-
-      border-radius: 12px;
-
-      margin-bottom: 16px;
-
-      font-family:
-        "JetBrains Mono",
-        monospace;
-
-      font-weight: 700;
-
-      font-size: 1rem;
-
-      background:
-        rgba(110,231,183,0.10);
-
-      border:
-        1px solid rgba(110,231,183,0.18);
-    }
-
-    #habilidades .skill-group h4 {
-
-      margin: 0 0 8px;
-
-      font-size: 1.05rem;
-    }
-
-    #habilidades .skill-group p {
-
-      margin: 0 0 20px;
-
-      line-height: 1.6;
-
-      opacity: .82;
-    }
-
-    #habilidades .skills-extras {
-
-      display: flex;
-
-      flex-wrap: wrap;
-
-      gap: 10px;
-
-      justify-content: center;
-
-      margin-top: 28px;
-    }
-
-    #habilidades .skill-group .skills-extras {
-
-      justify-content: flex-start;
-
-      margin-top: 0;
-    }
-
-    #habilidades .chip {
-
-      display: inline-flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      padding: 8px 12px;
-
-      border-radius: 999px;
-
-      border:
-        1px solid rgba(148,163,184,.18);
-
-      background:
-        rgba(15,23,42,.38);
-
-      font-size: .85rem;
-
-      white-space: nowrap;
-    }
-
-    #habilidades .featured-chip {
-
-      border-color:
-        rgba(110,231,183,.30);
-
-      background:
-        rgba(110,231,183,.08);
-    }
-
-    /* TABLET */
-
-    @media (max-width: 900px) {
-
-      #habilidades .skill-groups {
-
-        grid-template-columns: 1fr;
-      }
-
-    }
-
-    /* CELULAR */
-
-    @media (max-width: 560px) {
-
-      #habilidades .skill-group {
-
-        padding: 20px;
-      }
-
-      #habilidades .chip {
-
-        font-size: .8rem;
-
-        padding: 7px 10px;
-      }
-
-    }
-
-  </style>
-
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
   <!-- LOADING -->
-
   <div id="loader">
-
-    <div class="loader-text">
-      EMF<span>.</span>
-    </div>
-
+    <div class="loader-text">EMF<span>.</span></div>
   </div>
 
-
-  <!-- CURSOR -->
-
+  <!-- CURSOR BLOB -->
   <div id="cursorBlob"></div>
 
-
-  <!-- MENU -->
-
+  <!-- NAV -->
   <header>
-
     <nav class="nav">
-
-      <a href="#" class="logo">
-        EMF<span>.</span>
-      </a>
-
+      <a href="#" class="logo">EMF<span>.</span></a>
 
       <ul id="navList">
-
-        <li>
-          <a href="#sobre" data-i18n="nav.about">
-            Sobre
-          </a>
-        </li>
-
-        <li>
-          <a href="#habilidades" data-i18n="nav.skills">
-            Habilidades
-          </a>
-        </li>
-
-        <li>
-          <a href="#projetos" data-i18n="nav.projects">
-            Projetos
-          </a>
-        </li>
-
-        <li>
-          <a href="#experiencias" data-i18n="nav.exp">
-            Experiências
-          </a>
-        </li>
-
-        <li>
-          <a href="#contato" data-i18n="nav.contact">
-            Contato
-          </a>
-        </li>
-
+        <li><a href="#sobre" data-i18n="nav.about">Sobre</a></li>
+        <li><a href="#habilidades" data-i18n="nav.skills">Habilidades</a></li>
+        <li><a href="#projetos" data-i18n="nav.projects">Projetos</a></li>
+        <li><a href="#experiencias" data-i18n="nav.exp">Experiências</a></li>
+        <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
       </ul>
 
-
       <div class="nav-actions">
-
-        <button
-          id="langToggle"
-          class="icon-btn"
-          aria-label="Trocar idioma"
-        >
-          PT
-        </button>
-
-
-        <button
-          id="themeToggle"
-          class="icon-btn"
-          aria-label="Trocar tema"
-        >
-          🌙
-        </button>
-
-
-        <button
-          id="menuToggle"
-          class="icon-btn mobile-only"
-          aria-label="Abrir menu"
-        >
-          ☰
-        </button>
-
+        <button id="langToggle" class="icon-btn" aria-label="Trocar idioma">PT</button>
+        <button id="themeToggle" class="icon-btn" aria-label="Trocar tema">🌙</button>
+        <button id="menuToggle" class="icon-btn mobile-only" aria-label="Abrir menu">☰</button>
       </div>
-
     </nav>
-
   </header>
 
-
   <!-- HERO -->
-
   <section class="hero">
-
     <canvas id="particles"></canvas>
 
-
     <div class="hero-grid">
-
-
       <div class="hero-content">
-
-        <p
-          class="eyebrow"
-          data-i18n="hero.eyebrow"
-        >
-          Olá, eu sou
-        </p>
-
-
-        <h1>
-          Eduardo Machado Ferla
-        </h1>
-
-
+        <p class="eyebrow" data-i18n="hero.eyebrow"> Olá, eu sou</p>
+        <h1>Eduardo Machado Ferla</h1>
         <h2 class="typed">
-
-          <span data-i18n="hero.iam">
-            Programador
-          </span>
-
-          <span
-            id="typed"
-            class="accent"
-          ></span>
-
+          <span data-i18n="hero.iam">Programador</span>
+          <span id="typed" class="accent"></span>
         </h2>
-
-
-        <p
-          class="lead"
-          data-i18n="hero.lead"
-        >
-
-          Busco uma oportunidade para iniciar minha carreira
-          como Programador, onde posso aplicar e expandir
-          meus conhecimentos em um ambiente prático.
-
+        <p class="lead" data-i18n="hero.lead">
+          Busco uma oportunidade para iniciar minha carreira como Programador,
+          onde posso aplicar e expandir meus conhecimentos em um ambiente prático.
         </p>
-
 
         <div class="hero-actions">
-
-          <a
-            class="btn primary"
-            href="#projetos"
-            data-i18n="hero.cta1"
-          >
-            Ver projetos
-          </a>
-
-
-          <a
-            class="btn ghost"
-            href="curiculo.pdf"
-            download
-            data-i18n="hero.cta2"
-          >
-            📄 Baixar CV
-          </a>
-
+          <a class="btn primary" href="#projetos" data-i18n="hero.cta1">Ver projetos</a>
+          <a class="btn ghost" href="curriculo.pdf" download data-i18n="hero.cta2">📄 Baixar CV</a>
         </div>
-
 
         <div class="socials">
-
-          <a
-            href="https://github.com/eduardomachadoferla"
-            target="_blank"
-            rel="noopener"
-            class="social"
-          >
-            GitHub
-          </a>
-
-
-          <a
-            href="https://www.linkedin.com/in/eduardo-machado-ferla-a32113301/?skipRedirect=true"
-            target="_blank"
-            rel="noopener"
-            class="social"
-          >
-            LinkedIn
-          </a>
-
-
-          <a
-            href="mailto:emachadoferla@gmail.com"
-            class="social"
-          >
-            Email
-          </a>
-
+          <a href="https://github.com/eduardomachadoferla" target="_blank" rel="noopener" aria-label="GitHub" class="social">GitHub</a>
+          <a href="https://www.linkedin.com/in/eduardo-machado-ferla-a32113301/?skipRedirect=true" target="_blank" rel="noopener" aria-label="LinkedIn"
+            class="social">LinkedIn</a>
+          <a href="mailto:emachadoferla@gmail.com" class="social">Email</a>
         </div>
-
       </div>
-
-
-      <!-- FOTO -->
 
       <div class="hero-avatar">
-
         <div class="avatar-ring">
-
           <div class="avatar">
-
-            <img
-              src="eu.jpeg"
-              alt="Eduardo Machado Ferla"
-            />
-
+            <!-- Coloque uma foto sua: substitua o conteúdo abaixo por <img src="foto.jpg" alt="Eduardo"> -->
+            <img src="eu.jpeg" alt="Eduardo">
           </div>
-
         </div>
-
-
-        <div class="floating-tag tag-1">
-
-          { código }
-
-        </div>
-
-
-        <div class="floating-tag tag-2">
-
-          &lt;dev/&gt;
-
-        </div>
-
-
-        <div class="floating-tag tag-3">
-
-          PHP
-
-        </div>
-
+        <div class="floating-tag tag-1">{ código }</div>
+        <div class="floating-tag tag-2">&lt;dev/&gt;</div>
+        <div class="floating-tag tag-3">PHP</div>
       </div>
-
     </div>
 
-
-    <div class="scroll-indicator">
-
-      scroll ↓
-
-    </div>
-
+    <div class="scroll-indicator">scroll ↓</div>
   </section>
 
-
-  <!-- ESTATÍSTICAS -->
-
+  <!-- STATS -->
   <section class="stats-bar">
-
     <div class="container stats">
-
-
-      <div class="stat">
-
-        <span
-          class="num"
-          data-target="7"
-        >
-          0
-        </span>
-
-        <p data-i18n="stats.projects">
-          Projetos
-        </p>
-
+      <div class="stat"><span class="num" data-target="7">0</span>
+        <p data-i18n="stats.projects">Projetos</p>
       </div>
-
-
-      <div class="stat">
-
-        <span
-          class="num"
-          data-target="4"
-        >
-          0
-        </span>
-
-        <p data-i18n="stats.exp">
-          Experiências
-        </p>
-
+      <div class="stat"><span class="num" data-target="4">0</span>
+        <p data-i18n="stats.exp">Experiências</p>
       </div>
-
-
-      <div class="stat">
-
-        <span
-          class="num"
-          data-target="14"
-        >
-          0
-        </span>
-
-        <p data-i18n="stats.tech">
-          Tecnologias
-        </p>
-
+      <div class="stat"><span class="num" data-target="14">0</span>
+        <p data-i18n="stats.tech">Tecnologias</p>
       </div>
-
-
-      <div class="stat">
-
-        <span
-          class="num"
-          data-target="3"
-        >
-          0
-        </span>
-
-        <p>
-
-          +
-
-          <span data-i18n="stats.years">
-            anos estudando
-          </span>
-
-        </p>
-
+      <div class="stat"><span class="num" data-target="3">0</span>
+        <p>+ <span data-i18n="stats.years">anos estudando</span></p>
       </div>
-
-
     </div>
-
   </section>
-
 
   <!-- SOBRE -->
-
-  <section
-    id="sobre"
-    class="section"
-  >
-
-
+  <section id="sobre" class="section">
     <div class="container two-col">
-
-
       <div>
-
-
-        <h3
-          class="section-title"
-          data-i18n="about.title"
-        >
-
-          Sobre mim
-
-        </h3>
-
-
+        <h3 class="section-title" data-i18n="about.title">Sobre mim</h3>
         <p data-i18n="about.text">
-
-          Sou Eduardo, moro em Cascavel - Paraná e sou
-          apaixonado por tecnologia e desenvolvimento web.
-
-          Tenho formação técnica em Informática para Internet
-          e atualmente curso Análise e Desenvolvimento de Sistemas.
-
-          Gosto de transformar ideias em projetos funcionais,
-          com interesse em desenvolvimento web, automações,
-          inteligência artificial e soluções que unam tecnologia,
-          criatividade e experiência do usuário.
-
+          Sou Eduardo, moro em Cascavel - Paraná e sou apaixonado por tecnologia e desenvolvimento web.
+          Tenho formação técnica em Informática para Internet e atualmente curso Análise e Desenvolvimento de Sistemas.
+          Gosto de transformar ideias em projetos funcionais, com interesse em desenvolvimento web, automações,
+          inteligência artificial e soluções que unam tecnologia, criatividade e experiência do usuário.
         </p>
-
-
         <ul class="info-list">
-
-
-          <li>
-
-            <strong data-i18n="about.birth">
-              Nascimento:
-            </strong>
-
-            11/08/2007
-
-          </li>
-
-
-          <li>
-
-            <strong data-i18n="about.age">
-              Idade:
-            </strong>
-
-            <span id="age">
-              19
-            </span>
-
-            <span data-i18n="about.years">
-              anos
-            </span>
-
-          </li>
-
-
-          <li>
-
-            <strong data-i18n="about.loc">
-              Localização:
-            </strong>
-
-            Cascavel — PR
-
-          </li>
-
-
+          <li><strong data-i18n="about.birth">Nascimento:</strong> 11/08/2007</li>
+          <li><strong data-i18n="about.age">Idade:</strong> <span id="age">19</span> <span data-i18n="about.years">anos</span></li>
+          <li><strong data-i18n="about.loc">Localização:</strong> Cascavel — PR</li>
         </ul>
 
-
-        <h4
-          class="mini-title"
-          data-i18n="about.langs"
-        >
-
-          Idiomas
-
-        </h4>
-
-
+        <h4 class="mini-title" data-i18n="about.langs">Idiomas</h4>
         <div class="langs">
-
-
-          <div class="lang-item">
-
-            <span>
-              🇧🇷 Português
-            </span>
-
-            <span
-              class="muted"
-              data-i18n="about.native"
-            >
-              Nativo
-            </span>
-
+          <div class="lang-item"><span>🇧🇷 Português</span><span class="muted" data-i18n="about.native">Nativo</span>
           </div>
-
-
+          <div class="lang-item"><span>🇺🇸 Inglês</span><span class="muted"
+              data-i18n="about.intermediate">Intermediário</span></div>
           <div class="lang-item">
-
-            <span>
-              🇺🇸 Inglês
-            </span>
-
-            <span
-              class="muted"
-              data-i18n="about.intermediate"
-            >
-              Intermediário
-            </span>
-
+            <span>🇮🇹 Italiano</span>
+            <span class="muted">Intermediário</span>
           </div>
-
-
-          <div class="lang-item">
-
-            <span>
-              🇮🇹 Italiano
-            </span>
-
-            <span class="muted">
-              Intermediário
-            </span>
-
-          </div>
-
-
         </div>
-
-
       </div>
-
-
-      <!-- FORMAÇÃO -->
 
       <div>
-
-
-        <h3
-          class="section-title"
-          data-i18n="edu.title"
-        >
-          Formação
-        </h3>
-
-
+        <h3 class="section-title" data-i18n="edu.title">Formação</h3>
         <div class="timeline">
-
-
           <div class="t-item">
-
             <span class="t-dot"></span>
-
-            <h4>
-              Ensino Médio Técnico — Informática para Internet
-            </h4>
-
-            <p class="muted">
-
-              Marista Escola Social Cascavel — Completo
-
-            </p>
-
-            <p data-i18n="edu.1">
-
-              Ênfase em programação web, design e banco de dados.
-
-            </p>
-
+            <h4>Ensino Médio Técnico — Informática para Internet</h4>
+            <p class="muted">Marista Escola Social Cascavel — Completo</p>
+            <p data-i18n="edu.1">Ênfase em programação web, design e banco de dados.</p>
           </div>
-
-
           <div class="t-item">
-
             <span class="t-dot"></span>
-
-            <h4>
-
-              Análise e Desenvolvimento de Sistemas
-
-            </h4>
-
-            <p class="muted">
-
-              Univel — 1º semestre
-
-            </p>
-
+            <h4>Análise e Desenvolvimento de Sistemas</h4>
+            <p class="muted">Univel — 1º semestre</p>
           </div>
-
-
         </div>
-
-
       </div>
-
-
     </div>
-
-
   </section>
-
 
   <!-- HABILIDADES -->
-
-  <section
-    id="habilidades"
-    class="section alt"
-  >
-
-
+  <section id="habilidades" class="section alt">
     <div class="container">
-
-
-      <h3
-        class="section-title center"
-        data-i18n="skills.title"
-      >
-
-        Habilidades Técnicas
-
-      </h3>
-
+      <h3 class="section-title center" data-i18n="skills.title">Habilidades Técnicas</h3>
 
       <div class="skill-groups">
-
-
-        <!-- FRONT-END -->
-
         <article class="skill-group">
-
-
-          <div class="skill-group-icon">
-
-            &lt;/&gt;
-
-          </div>
-
-
-          <h4>
-            Front-end
-          </h4>
-
-
-          <p>
-
-            Construção de interfaces responsivas
-            e interativas para web.
-
-          </p>
-
-
+          <div class="skill-group-icon">&lt;/&gt;</div>
+          <h4>Front-end</h4>
+          <p>Construção de interfaces responsivas e interativas para web.</p>
           <div class="skills-extras compact">
-
-
-            <span class="chip">
-              HTML5
-            </span>
-
-
-            <span class="chip">
-              CSS3
-            </span>
-
-
-            <span class="chip">
-              JavaScript
-            </span>
-
-
-            <span class="chip">
-              ReactJS
-            </span>
-
-
+            <span class="chip">HTML5</span>
+            <span class="chip">CSS3</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">ReactJS</span>
           </div>
-
-
         </article>
 
-
-        <!-- BACK-END -->
-
         <article class="skill-group">
-
-
-          <div class="skill-group-icon">
-
-            { }
-
-          </div>
-
-
-          <h4>
-
-            Back-end & Banco de Dados
-
-          </h4>
-
-
-          <p>
-
-            Desenvolvimento de aplicações,
-            APIs e integração com banco de dados.
-
-          </p>
-
-
+          <div class="skill-group-icon">{ }</div>
+          <h4>Back-end &amp; Banco de Dados</h4>
+          <p>Desenvolvimento de aplicações, APIs e integração com banco de dados.</p>
           <div class="skills-extras compact">
-
-
-            <span class="chip">
-              PHP 8
-            </span>
-
-
-            <span class="chip">
-              Laravel
-            </span>
-
-
-            <span class="chip">
-              MySQL
-            </span>
-
-
-            <span class="chip">
-              SQL
-            </span>
-
-
-            <span class="chip">
-              Node.js
-            </span>
-
-
-            <span class="chip">
-              APIs
-            </span>
-
-
+            <span class="chip">PHP 8</span>
+            <span class="chip">Laravel</span>
+            <span class="chip">MySQL</span>
+            <span class="chip">SQL</span>
+            <span class="chip">Node.js</span>
+            <span class="chip">APIs</span>
           </div>
-
-
         </article>
 
-
-        <!-- LINGUAGENS E FERRAMENTAS -->
-
         <article class="skill-group">
-
-
-          <div class="skill-group-icon">
-
-            $_
-
-          </div>
-
-
-          <h4>
-
-            Linguagens & Ferramentas
-
-          </h4>
-
-
-          <p>
-
-            Conhecimentos de programação,
-            versionamento e ambiente de desenvolvimento.
-
-          </p>
-
-
+          <div class="skill-group-icon">$_</div>
+          <h4>Linguagens &amp; Ferramentas</h4>
+          <p>Conhecimentos de programação, versionamento e ambiente de desenvolvimento.</p>
           <div class="skills-extras compact">
-
-
-            <span class="chip">
-              Python
-            </span>
-
-
-            <span class="chip">
-              C (básico)
-            </span>
-
-
-            <span class="chip">
-              C++
-            </span>
-
-
-            <span class="chip">
-              C# (básico)
-            </span>
-
-
-            <span class="chip ">
-              Git
-            </span>
-
-
-            <span class="chip ">
-              GitHub
-            </span>
-
-
-            <span class="chip ">
-              Linux
-            </span>
-
-
-            <span class="chip">
-              VS Code
-            </span>
-
-
+            <span class="chip">Python</span>
+            <span class="chip">C (básico)</span>
+            <span class="chip">C++</span>
+            <span class="chip">C# (básico)</span>
+            <span class="chip featured-chip">Git</span>
+            <span class="chip featured-chip">GitHub</span>
+            <span class="chip featured-chip">Linux / Ubuntu</span>
+            <span class="chip">VS Code</span>
           </div>
-
-
         </article>
-
-
       </div>
-
-
-      <!-- OUTROS CONHECIMENTOS -->
 
       <div class="skills-extras">
-
-
-        <span class="chip">
-          Desenvolvimento de API
-        </span>
-
-
-        <span class="chip">
-          FlutterFlow / Mobile
-        </span>
-
-
-        <span class="chip">
-          Inteligência Artificial
-        </span>
-
-
-        <span class="chip">
-          Automação
-        </span>
-
-
-        <span class="chip">
-          UI/UX
-        </span>
-
-
-        <span class="chip">
-          Responsividade
-        </span>
-
-
-        <span class="chip">
-          Pacote Office
-        </span>
-
-
+        <span class="chip">Desenvolvimento de API</span>
+        <span class="chip">FlutterFlow / Mobile</span>
+        <span class="chip">Inteligência Artificial</span>
+        <span class="chip">Automação</span>
+        <span class="chip">UI/UX</span>
+        <span class="chip">Responsividade</span>
+        <span class="chip">Pacote Office</span>
       </div>
-
-
     </div>
-
-
   </section>
 
-
   <!-- PROJETO DESTAQUE -->
-
   <section class="section featured-section">
-
-
     <div class="container">
-
-
-      <p class="eyebrow center">
-
-        //
-
-        <span data-i18n="featured.eyebrow">
-          Projeto em destaque
-        </span>
-
-      </p>
-
-
+      <p class="eyebrow center">// <span data-i18n="featured.eyebrow">Projeto em destaque</span></p>
       <div class="featured">
-
-
         <div>
-
-
-          <h3>
-
-            🤖 Jarvis
-
-          </h3>
-
-
-          <p
-            class="muted"
-            data-i18n="featured.sub"
-          >
-
-            Assistente de IA pessoal em Python
-
-          </p>
-
-
+          <h3>🤖 Jarvis</h3>
+          <p class="muted" data-i18n="featured.sub">Assistente de IA pessoal em Python</p>
           <p data-i18n="featured.desc">
-
-            Assistente virtual inteligente capaz
-            de reconhecer comandos de voz,
-            executar tarefas no sistema,
-            responder perguntas e automatizar
-            atividades do dia a dia.
-
-            Desenvolvido do zero em Python.
-
+            Assistente virtual inteligente capaz de reconhecer comandos de voz,
+            executar tarefas no sistema, responder perguntas e automatizar
+            atividades do dia a dia. Desenvolvido do zero em Python.
           </p>
-
-
           <div class="tech-list">
-
-            <span>
-              Python
-            </span>
-
-            <span>
-              Speech Recognition
-            </span>
-
-            <span>
-              Text-to-Speech
-            </span>
-
-            <span>
-              APIs
-            </span>
-
+            <span>Python</span><span>Speech Recognition</span><span>Text-to-Speech</span><span>APIs</span>
           </div>
-
-
           <div class="featured-actions">
-
-
-            <a
-              href="https://github.com/eduardomachadoferla/Jarvis"
-              target="_blank"
-              rel="noopener"
-              class="btn primary"
-            >
-
-              &lt;/&gt;
-
-              <span data-i18n="featured.code">
-
-                Ver código no GitHub
-
-              </span>
-
+            <a href="https://github.com/eduardomachadoferla/Jarvis" target="_blank" rel="noopener" class="btn primary">
+              &lt;/&gt; <span data-i18n="featured.code">Ver código no GitHub</span>
             </a>
-
-
           </div>
-
-
         </div>
-
-
-        <!-- TERMINAL -->
-
         <div class="featured-visual">
-
-
           <div class="terminal">
-
-
-            <div class="term-bar">
-
-              <span></span>
-
-              <span></span>
-
-              <span></span>
-
-            </div>
-
-
+            <div class="term-bar"><span></span><span></span><span></span></div>
             <pre><code><span class="c-c">$</span> python jarvis.py
 <span class="c-g">[Jarvis]</span> Olá Eduardo, em que posso ajudar?
 <span class="c-c">&gt;</span> abrir navegador
@@ -1183,763 +261,198 @@
 <span class="c-c">&gt;</span> qual a hora?
 <span class="c-g">[Jarvis]</span> Agora são <span class="c-y">14:32</span>
 <span class="c-c">&gt;</span> _</code></pre>
-
-
           </div>
-
-
         </div>
-
-
       </div>
-
-
     </div>
-
-
   </section>
 
-
   <!-- PROJETOS -->
-
-  <section
-    id="projetos"
-    class="section alt"
-  >
-
-
+  <section id="projetos" class="section alt">
     <div class="container">
-
-
-      <h3
-        class="section-title center"
-        data-i18n="projects.title"
-      >
-
-        Projetos
-
-      </h3>
-
-
-      <!-- FILTROS -->
+      <h3 class="section-title center" data-i18n="projects.title">Projetos</h3>
 
       <div class="filters">
-
-
-        <button
-          class="filter active"
-          data-filter="all"
-          data-i18n="projects.all"
-        >
-
-          Todos
-
-        </button>
-
-
-        <button
-          class="filter"
-          data-filter="html"
-        >
-
-          HTML/CSS/JS
-
-        </button>
-
-
-        <button
-          class="filter"
-          data-filter="php"
-        >
-
-          PHP/MySQL
-
-        </button>
-
-
-        <button
-          class="filter"
-          data-filter="python"
-        >
-
-          Python/IA
-
-        </button>
-
-
-        <button
-          class="filter"
-          data-filter="sistema"
-          data-i18n="projects.system"
-        >
-
-          Sistema
-
-        </button>
-
-
+        <button class="filter active" data-filter="all" data-i18n="projects.all">Todos</button>
+        <button class="filter" data-filter="html">HTML/CSS/JS</button>
+        <button class="filter" data-filter="php">PHP/MySQL</button>
+        <button class="filter" data-filter="python">Python/IA</button>
+        <button class="filter" data-filter="sistema" data-i18n="projects.system">Sistema</button>
       </div>
-
 
       <div class="projects-grid">
 
+        <article class="project" data-cat="html">
+          <div class="tag">HTML5 · CSS3 · JavaScript</div>
 
-        <!-- PROJETO 1 -->
-
-        <article
-          class="project"
-          data-cat="html"
-        >
-
-
-          <div class="tag">
-
-            HTML5 · CSS3 · JavaScript
-
-          </div>
-
-
-          <h4>
-
-            Portfólio Web Responsivo
-
-          </h4>
-
+          <h4>Portfólio Web Responsivo</h4>
 
           <p>
-
-            Aplicação web estática desenvolvida
-            com foco em responsividade,
-            performance e experiência do usuário
-            utilizando HTML, CSS e JavaScript.
-
+            Aplicação web estática desenvolvida com foco em responsividade,
+            performance e experiência do usuário utilizando HTML, CSS e JavaScript.
           </p>
-
-
         </article>
 
+        <article class="project" data-cat="html">
+          <div class="tag">JavaScript · Frontend</div>
 
-        <!-- PROJETO 2 -->
-
-        <article
-          class="project"
-          data-cat="html"
-        >
-
-
-          <div class="tag">
-
-            JavaScript · Frontend
-
-          </div>
-
-
-          <h4>
-
-            Sistema de Gerenciamento de Tarefas
-
-          </h4>
-
+          <h4>Sistema de Gerenciamento de Tarefas</h4>
 
           <p>
-
-            Aplicação frontend para gerenciamento
-            de tarefas com manipulação dinâmica
-            do DOM, armazenamento local e
-            organização de atividades.
-
+            Aplicação frontend para gerenciamento de tarefas com manipulação dinâmica
+            do DOM, armazenamento local e organização de atividades.
           </p>
-
-
         </article>
 
+        <article class="project" data-cat="html">
+          <div class="tag">HTML · CSS · JS</div>
 
-        <!-- PROJETO 3 -->
-
-        <article
-          class="project"
-          data-cat="html"
-        >
-
-
-          <div class="tag">
-
-            HTML · CSS · JS
-
-          </div>
-
-
-          <h4>
-
-            Portal Web de Notícias
-
-          </h4>
-
+          <h4>Portal Web de Notícias</h4>
 
           <p>
-
-            Plataforma de exibição de conteúdo
-            informativo desenvolvida com arquitetura
-            frontend responsiva e componentes
-            dinâmicos em JavaScript.
-
+            Plataforma de exibição de conteúdo informativo desenvolvida com
+            arquitetura frontend responsiva e componentes dinâmicos em JavaScript.
           </p>
-
-
         </article>
 
+        <article class="project" data-cat="php">
+          <div class="tag">PHP · MySQL · JavaScript</div>
 
-        <!-- PROJETO 4 -->
-
-        <article
-          class="project"
-          data-cat="php"
-        >
-
-
-          <div class="tag">
-
-            PHP · MySQL · JavaScript
-
-          </div>
-
-
-          <h4>
-
-            E-commerce FullStack
-
-          </h4>
-
+          <h4>E-commerce FullStack</h4>
 
           <p>
-
-            Plataforma de vendas online com
-            integração de banco de dados,
-            gerenciamento de produtos,
-            autenticação de usuários
-            e interface responsiva.
-
+            Plataforma de vendas online com integração de banco de dados,
+            gerenciamento de produtos, autenticação de usuários e interface responsiva.
           </p>
-
-
         </article>
 
+        <article class="project" data-cat="php">
+          <div class="tag">PHP · SQL · Gateway Payment</div>
 
-        <!-- PROJETO 5 -->
-
-        <article
-          class="project"
-          data-cat="php"
-        >
-
-
-          <div class="tag">
-
-            PHP · SQL · Gateway Payment
-
-          </div>
-
-
-          <h4>
-
-            Plataforma de Cursos Online
-
-          </h4>
-
+          <h4>Plataforma de Cursos Online</h4>
 
           <p>
-
-            Sistema web para comercialização
-            de cursos digitais com integração
-            de pagamentos, painel administrativo
-            e gerenciamento de usuários.
-
+            Sistema web para comercialização de cursos digitais com integração
+            de pagamentos, painel administrativo e gerenciamento de usuários.
           </p>
-
-
         </article>
 
+        <article class="project" data-cat="sistema">
+          <div class="tag">Sistema · Automação · Hardware</div>
 
-        <!-- PROJETO 6 -->
-
-        <article
-          class="project"
-          data-cat="sistema"
-        >
-
-
-          <div class="tag">
-
-            Sistema · Automação · Hardware
-
-          </div>
-
-
-          <h4>
-
-            Sistema de Registro Escolar
-
-          </h4>
-
+          <h4>Sistema de Registro Escolar</h4>
 
           <p>
-
-            Plataforma integrada para controle
-            automatizado de atrasos escolares,
-            utilizando autenticação via carteirinha
-            e emissão térmica de tickets.
-
+            Plataforma integrada para controle automatizado de atrasos escolares,
+            utilizando autenticação via carteirinha e emissão térmica de tickets.
           </p>
-
-
         </article>
 
+        <article class="project" data-cat="python">
+          <div class="tag">Python · Inteligência Artificial</div>
 
-        <!-- PROJETO 7 -->
-
-        <article
-          class="project"
-          data-cat="python"
-        >
-
-
-          <div class="tag">
-
-            Python · Inteligência Artificial
-
-          </div>
-
-
-          <h4>
-
-            Jarvis — Assistente Virtual Inteligente
-
-          </h4>
-
+          <h4>Jarvis — Assistente Virtual Inteligente</h4>
 
           <p>
-
-            Assistente virtual desenvolvido
-            em Python com reconhecimento de voz,
-            automação de tarefas e integração
-            com APIs e serviços inteligentes.
-
+            Assistente virtual desenvolvido em Python com reconhecimento de voz,
+            automação de tarefas e integração com APIs e serviços inteligentes.
           </p>
-
-
         </article>
-
 
       </div>
-
-
     </div>
-
-
   </section>
 
-
-  <!-- EXPERIÊNCIAS -->
-
-  <section
-    id="experiencias"
-    class="section"
-  >
-
-
+  <!-- EXPERIENCIAS -->
+  <section id="experiencias" class="section">
     <div class="container">
-
-
-      <h3
-        class="section-title center"
-        data-i18n="exp.title"
-      >
-
-        Experiências
-
-      </h3>
-
-
+      <h3 class="section-title center" data-i18n="exp.title">Experiências</h3>
       <div class="exp-grid">
-
-
+        <!-- <div class="exp">
+          <h4>Colégio Auxiliadora</h4>
+          <p class="muted" data-i18n="exp.1">Auxiliar de Mídia e Marketing</p>
+        </div> -->
         <div class="exp">
-
-
-          <h4>
-
-            Lobus Software
-
-          </h4>
-
-
-          <p
-            class="muted"
-            data-i18n="exp.2"
-          >
-
-            Suporte técnico em backup e cybersegurança
-
-          </p>
-
-
+          <h4>Lobus Software</h4>
+          <p class="muted" data-i18n="exp.2">Suporte técnico em backup e cybersegurança</p>
         </div>
-
-
         <div class="exp">
-
-
-          <h4>
-
-            Group Data Center
-
-          </h4>
-
-
-          <p
-            class="muted"
-            data-i18n="exp.3"
-          >
-
-            Suporte e automação em empresa de TI
-
-          </p>
-
-
+          <h4>Group Data Center</h4>
+          <p class="muted" data-i18n="exp.3">Suporte e automação em empresa de TI</p>
         </div>
-
-
+        <!-- <div class="exp">
+          <h4 data-i18n="exp.4.t">Oficina de Pianos</h4>
+          <p class="muted" data-i18n="exp.4">Auxiliar de produção</p>
+        </div> -->
       </div>
-
-
     </div>
-
-
   </section>
-
 
   <!-- CONTATO -->
-
-  <section
-    id="contato"
-    class="section alt"
-  >
-
-
+  <section id="contato" class="section alt">
     <div class="container">
-
-
-      <h3
-        class="section-title center"
-        data-i18n="contact.title"
-      >
-
-        Vamos conversar
-
-      </h3>
-
-
-      <p
-        class="center muted"
-        data-i18n="contact.sub"
-      >
-
-        Estou aberto a oportunidades,
-        projetos e novas conexões profissionais.
-
-      </p>
-
+      <h3 class="section-title center" data-i18n="contact.title">Vamos conversar</h3>
+      <p class="center muted" data-i18n="contact.sub">Estou aberto a oportunidades, projetos e novas conexões profissionais.</p>
 
       <div class="contact-grid">
-
-
-        <!-- CONTATOS -->
-
         <div class="contact-cards">
-
-
-          <a
-            class="c-card"
-            href="tel:+5545984314554"
-          >
-
-
-            <span>
-
-              📱
-
-              <span data-i18n="contact.phone">
-
-                Telefone
-
-              </span>
-
-            </span>
-
-
-            <strong>
-
-              (45) 98431-4554
-
-            </strong>
-
-
+          <a class="c-card" href="tel:+5545984314554">
+            <span>📱 <span data-i18n="contact.phone">Telefone</span></span>
+            <strong>(45) 98431-4554</strong>
           </a>
-
-
-          <a
-            class="c-card"
-            href="mailto:emachadoferla@gmail.com"
-          >
-
-
-            <span>
-
-              ✉️ E-mail
-
-            </span>
-
-
-            <strong>
-
-              emachadoferla@gmail.com
-
-            </strong>
-
-
+          <a class="c-card" href="mailto:emachadoferla@gmail.com">
+            <span>✉️ E-mail</span>
+            <strong>emachadoferla@gmail.com</strong>
           </a>
-
-
-          <a
-            class="c-card"
-            href="https://github.com/eduardomachadoferla"
-            target="_blank"
-            rel="noopener"
-          >
-
-
-            <span>
-
-              💻 GitHub
-
-            </span>
-
-
-            <strong>
-
-              @eduardomachadoferla
-
-            </strong>
-
-
+          <a class="c-card" href="https://github.com/eduardomachadoferla" target="_blank" rel="noopener">
+            <span>💻 GitHub</span>
+            <strong>@eduardomachadoferla</strong>
           </a>
-
-
           <div class="c-card">
-
-
-            <span>
-
-              📍
-
-              <span data-i18n="contact.loc">
-
-                Localização
-
-              </span>
-
-            </span>
-
-
-            <strong>
-
-              Cascavel — PR
-
-            </strong>
-
-
+            <span>📍 <span data-i18n="contact.loc">Localização</span></span>
+            <strong>Cascavel — PR</strong>
           </div>
-
-
         </div>
-
-
-        <!-- SERVIÇOS -->
 
         <div class="services-grid">
-
-
           <div class="service-card">
-
-
-            <h3>
-
-              🌐 Desenvolvimento Web
-
-            </h3>
-
-
-            <p>
-
-              Criação de sites modernos,
-              responsivos e otimizados.
-
-            </p>
-
-
+            <h3>🌐 Desenvolvimento Web</h3>
+            <p>Criação de sites modernos, responsivos e otimizados.</p>
           </div>
-
-
           <div class="service-card">
-
-
-            <h3>
-
-              ⚙️ Sistemas Web
-
-            </h3>
-
-
-            <p>
-
-              Desenvolvimento de sistemas
-              e APIs com PHP e MySQL.
-
-            </p>
-
-
+            <h3>⚙️ Sistemas Web</h3>
+            <p>Desenvolvimento de sistemas e APIs com PHP e MySQL.</p>
           </div>
-
-
           <div class="service-card">
-
-
-            <h3>
-
-              🤖 Automações
-
-            </h3>
-
-
-            <p>
-
-              Automação de tarefas
-              e integração de processos
-              utilizando Python.
-
-            </p>
-
-
+            <h3>🤖 Automações</h3>
+            <p>Automação de tarefas e integração de processos utilizando Python.</p>
           </div>
-
-
           <div class="service-card">
-
-
-            <h3>
-
-              🐧 Ambiente Linux
-
-            </h3>
-
-
-            <p>
-
-              Uso de Linux/Ubuntu,
-              terminal, Git e GitHub
-              no fluxo de desenvolvimento.
-
-            </p>
-
-
+            <h3>🐧 Ambiente Linux</h3>
+            <p>Uso de Linux/Ubuntu, terminal, Git e GitHub no fluxo de desenvolvimento.</p>
           </div>
-
-
         </div>
-
-
       </div>
-
-
     </div>
-
-
   </section>
 
-
-  <!-- WHATSAPP -->
-
-  <a
-    href="https://wa.me/5545984314554"
-    target="_blank"
-    rel="noopener"
-    class="wa-fab"
-    aria-label="WhatsApp"
-  >
-
-
-    <svg
-      viewBox="0 0 24 24"
-      width="28"
-      height="28"
-      fill="currentColor"
-    >
-
+  <!-- WHATSAPP FLUTUANTE -->
+  <a href="https://wa.me/5545984314554" target="_blank" rel="noopener" class="wa-fab" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
       <path
-        d="M.057 24l1.687-6.163A11.867 11.867 0 010 11.987C0 5.367 5.367 0 11.987 0a11.86 11.86 0 018.413 3.488 11.82 11.82 0 013.495 8.404c-.003 6.62-5.37 11.987-11.99 11.987a11.99 11.99 0 01-5.733-1.46L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zM17.498 14.382c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.173.198-.297.298-.495.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"
-      />
-
+        d="M.057 24l1.687-6.163A11.867 11.867 0 010 11.987C0 5.367 5.367 0 11.987 0a11.86 11.86 0 018.413 3.488 11.82 11.82 0 013.495 8.404c-.003 6.62-5.37 11.987-11.99 11.987a11.99 11.99 0 01-5.733-1.46L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zM17.498 14.382c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.173.198-.297.298-.495.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z" />
     </svg>
-
-
   </a>
 
-
-  <!-- VOLTAR AO TOPO -->
-
-  <button
-    id="toTop"
-    class="to-top"
-    aria-label="Voltar ao topo"
-  >
-
-    ↑
-
-  </button>
-
-
-  <!-- RODAPÉ -->
+  <!-- BACK TO TOP -->
+  <button id="toTop" class="to-top" aria-label="Voltar ao topo">↑</button>
 
   <footer>
-
-
-    <p>
-
-      ©
-
-      <span id="year"></span>
-
-      Eduardo Machado Ferla —
-
-      <span data-i18n="footer.made">
-
-        Desenvolvido com
-
-      </span>
-
-      HTML, CSS & JavaScript.
-
-    </p>
-
-
+    <p>© <span id="year"></span> Eduardo Machado Ferla — <span data-i18n="footer.made">Desenvolvido com</span> HTML, CSS &amp;
+      JavaScript.</p>
   </footer>
 
-
-  <!-- JAVASCRIPT -->
-
   <script src="script.js"></script>
-
-
 </body>
 
 </html>
