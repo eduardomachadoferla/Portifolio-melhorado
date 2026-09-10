@@ -121,6 +121,7 @@ const translations = {
   },
 };
 translations.it = {
+<<<<<<< HEAD
   'nav.about': 'Chi sono', 'nav.skills': 'Competenze', 'nav.projects': 'Progetti',
   'nav.exp': 'Esperienze', 'nav.contact': 'Contatto',
   'hero.eyebrow': '// Ciao, sono', 'hero.iam': 'Sviluppatore',
@@ -145,6 +146,41 @@ translations.it = {
   'footer.made': 'Sviluppato con'
 };
 
+=======
+  'nav.about': 'Chi sono',
+  'nav.skills': 'Competenze',
+  'nav.projects': 'Progetti',
+  'nav.exp': 'Esperienze',
+  'nav.contact': 'Contatto',
+
+  'hero.eyebrow': '// Ciao, sono',
+  'hero.iam': 'Sviluppatore',
+
+  'hero.lead':
+    'Cerco un’opportunità per iniziare la mia carriera come sviluppatore, dove posso applicare ed espandere le mie conoscenze in un ambiente pratico.',
+
+  'hero.cta1': 'Vedi progetti',
+  'hero.cta2': '📄 Scarica CV',
+
+  'stats.projects': 'Progetti',
+  'stats.exp': 'Esperienze',
+  'stats.tech': 'Tecnologie',
+  'stats.years': 'anni di studio',
+
+  'about.title': 'Chi sono',
+
+  'contact.title': 'Parliamo',
+  'contact.sub':
+    'Sono aperto a opportunità e collaborazioni.',
+
+  'form.name': 'Nome',
+  'form.msg': 'Messaggio',
+  'form.send': 'Invia messaggio',
+
+  'footer.made': 'Creato con'
+};
+
+>>>>>>> abdc397 (linguas)
 const langBtn = document.getElementById('langToggle');
 
 const langs = ['pt', 'en', 'it'];
