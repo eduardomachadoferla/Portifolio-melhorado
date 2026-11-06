@@ -73,7 +73,7 @@ const translations = {
     'exp.1': 'Auxiliar de Mídia e Marketing',
     'exp.2': 'Suporte técnico em backup e cybersegurança',
     'exp.3': 'Suporte e automação em empresa de TI',
-    'exp.4.t': 'Oficina de Pianos', 'exp.4': 'Analista de suporte',
+    'exp.4.t': 'Icondev tecnologia', 'exp.4': 'Analista de suporte',
     'contact.title': 'Vamos conversar',
     'contact.sub': 'Estou aberto a oportunidades, projetos e novas conexões profissionais.',
     'contact.phone': 'Telefone', 'contact.loc': 'Localização',
